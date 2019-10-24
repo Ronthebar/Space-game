@@ -1,0 +1,57 @@
+<!--
+This is a UI state file 
+-->
+
+<configurations>
+        <active>
+            <configuration name="HTML5" />
+        </active>
+        <display name="HTML5" />
+    </configurations>
+    <open-tabs>
+        <layout order="0">Game</layout>
+        <layout order="2">Components</layout>
+    </open-tabs>
+    <properties>
+        <property expanded="1" name="About" />
+        <property expanded="1" name="Project settings" />
+        <property expanded="0" name="Window Size" />
+        <property expanded="1" name="Configuration Settings" />
+    </properties>
+    <families-expanded root="1" />
+    <folders-expanded>
+        <folder expanded="1" path="object-folder/" />
+        <folder expanded="0" path="object-folder/Plugins/" />
+        <folder expanded="1" path="object-folder/SpaseShips/" />
+        <folder expanded="1" path="object-folder/FX/" />
+        <folder expanded="0" path="object-folder/Bullet/" />
+        <folder expanded="0" path="object-folder/Text/" />
+        <folder expanded="1" path="object-folder/Touch/" />
+        <folder expanded="1" path="layout-folder/" />
+        <folder expanded="1" path="event-folder/" />
+        <folder expanded="1" path="file-folder/" />
+        <folder expanded="1" path="sound-folder/" />
+        <folder expanded="1" path="music-folder/" />
+        <folder expanded="1" path="file-folder/Icons/" />
+        <folder expanded="1" path="animation-folder/Player/" />
+        <folder expanded="1" path="animation-folder/BasicEnemy/" />
+        <folder expanded="1" path="animation-folder/BossEnemy/" />
+        <folder expanded="1" path="animation-folder/Player2/" />
+        <folder expanded="1" path="animation-folder/Star/" />
+        <folder expanded="1" path="animation-folder/EnemyBullet/" />
+        <folder expanded="1" path="animation-folder/PlayerBullet/" />
+        <folder expanded="1" path="animation-folder/Para/" />
+        <folder expanded="1" path="animation-folder/Slow/" />
+        <folder expanded="1" path="animation-folder/Steer/" />
+        <folder expanded="1" path="animation-folder/SteerBG/" />
+        <folder expanded="1" path="animation-folder/TouchL/" />
+        <folder expanded="1" path="animation-folder/TouchR/" />
+        <folder expanded="1" path="animation-folder/flame/" />
+        <folder expanded="1" path="animation-folder/Explosion/" />
+        <folder expanded="1" path="animation-folder/game_over/" />
+        <folder expanded="1" path="animation-folder/cp/" />
+        <folder expanded="1" path="animation-folder/leftDrag/" />
+        <folder expanded="1" path="animation-folder/rightDrag/" />
+        <folder expanded="1" path="animation-folder/speedUP/" />
+        <folder expanded="1" path="animation-folder/speedDown/" />
+    </folders-expanded>
