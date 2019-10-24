@@ -1,0 +1,522 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2project>
+    <name>Space Game</name>
+    <description></description>
+    <version>1.0.0.0</version>
+    <author>R-B</author>
+    <app-id>com.mycompany.myapp</app-id>
+    <used-plugins>
+        <plugin author="JS" id="Audio" version="1">Audio</plugin>
+        <plugin author="JS" id="Function" version="1">Function</plugin>
+        <plugin author="JS" id="Particles" version="1">Particles</plugin>
+        <plugin author="JS" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="JS" id="Touch" version="1">Touch</plugin>
+        <plugin author="JS" id="WebStorage" version="1">WebStorage</plugin>
+    </used-plugins>
+    <used-behaviors>
+        <behavior author="JS" id="Bullet" version="1">Bullet</behavior>
+        <behavior author="JS" id="Car" version="1">Car</behavior>
+        <behavior author="JS" id="DragnDrop" version="1">Drag &amp; Drop</behavior>
+        <behavior author="JS" id="Fade" version="1">Fade</behavior>
+        <behavior author="JS" id="Flash" version="1">Flash</behavior>
+        <behavior author="JS" id="LOS" version="1">Line Of Sight</behavior>
+        <behavior author="JS" id="Physics" version="1">Physics</behavior>
+        <behavior author="JS" id="Pin" version="1">Pin</behavior>
+        <behavior author="JS" id="Sin" version="1">Sine</behavior>
+        <behavior author="JS" id="Turret" version="1">Turret</behavior>
+        <behavior author="JS" id="destroy" version="1">Destroy outside layout</behavior>
+        <behavior author="Tween" id="Tween" version="1.700000048">LiteTween</behavior>
+        <behavior author="JS" id="scrollto" version="1">Scroll To</behavior>
+        <behavior author="JS" id="wrap" version="1">Wrap</behavior>
+    </used-behaviors>
+    <used-effects>
+        <effect author="JS" id="lighten">Lighten</effect>
+    </used-effects>
+    <configurations>
+        <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
+    </configurations>
+    <window-size>
+        <width>1280</width>
+        <height>720</height>
+    </window-size>
+    <pixel-rounding>0</pixel-rounding>
+    <preview-effects>1</preview-effects>
+    <use-loader-layout>0</use-loader-layout>
+    <configuration-settings>
+        <prop name="Clear background">Yes</prop>
+        <prop name="Downscaling">Medium quality</prop>
+        <prop name="Enable WebGL">On</prop>
+        <prop name="Fullscreen in browser">Letterbox scale</prop>
+        <prop name="Fullscreen scaling">High quality</prop>
+        <prop name="Loader style">Percentage text</prop>
+        <prop name="Orientations">Any</prop>
+        <prop name="Pause on unfocus">No</prop>
+        <prop name="Physics engine">Box2D asm.js</prop>
+        <prop name="Preload sounds">Yes</prop>
+        <prop name="Preview browser">(default)</prop>
+        <prop name="Sampling">Linear</prop>
+        <prop name="Use high-DPI display">Yes</prop>
+    </configuration-settings>
+    <object-folder>
+        <object-folder name="Plugins">
+            <object-type name="Audio" sid="">
+                <plugin id="Audio" />
+            </object-type>
+            <object-type name="WebStorage" sid="">
+                <plugin id="WebStorage" />
+            </object-type>
+            <object-type name="Touch" sid="">
+                <plugin id="Touch" />
+            </object-type>
+        </object-folder>
+        <object-folder name="SpaseShips">
+            <object-type name="Player" sid="">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="ScrollTo" sid="">
+                        <behavior id="scrollto" />
+                    </behavior-type>
+                    <behavior-type name="Car" sid="">
+                        <behavior id="Car" />
+                    </behavior-type>
+                    <behavior-type name="LineOfSight" sid="">
+                        <behavior id="LOS" />
+                    </behavior-type>
+                    <behavior-type name="Wrap" sid="">
+                        <behavior id="wrap" />
+                    </behavior-type>
+                    <behavior-type name="Flash" sid="">
+                        <behavior id="Flash" />
+                    </behavior-type>
+                    <behavior-type name="Physics" sid="">
+                        <behavior id="Physics" />
+                    </behavior-type>
+                    <behavior-type name="Sine" sid="">
+                        <behavior id="Sin" />
+                    </behavior-type>
+                    <behavior-type name="Fade" sid="">
+                        <behavior id="Fade" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="2" 
+							   loop="1" 
+							   name="Default" 
+							   pingpong="0" 
+							   repeatcount="" 
+							   repeatto="" sid="" speed="">
+							   
+                        <frame duration="1" hotspotX="" hotspotY="1" 
+								original-source="Spaceship-PNG-File.png">
+                            <collision-poly>
+                                <point x="" y="" />                              
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="" hotspotY="1">
+                            <collision-poly>
+                                <point x="" y="" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="BasicEnemy" sid="">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Turret" sid="">
+                        <behavior id="Turret" />
+                    </behavior-type>
+                    <behavior-type name="LineOfSight" sid="">
+                        <behavior id="LOS" />
+                    </behavior-type>
+                    <behavior-type name="Bullet" sid="">
+                        <behavior id="Bullet" />
+                    </behavior-type>
+                    <behavior-type name="Wrap" sid="">
+                        <behavior id="wrap" />
+                    </behavior-type>
+                    <behavior-type name="Physics" sid="">
+                        <behavior id="Physics" />
+                    </behavior-type>
+                    <behavior-type name="Fade" sid="">
+                        <behavior id="Fade" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="" speed="10">
+                        <frame duration="1" hotspotX="1" hotspotY="0.5" original-source="cat-star-wars.png">
+                            <collision-poly>
+                                <point x="" y="" />
+                                
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="BossEnemy" sid="">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="Helth" sid="" type="number" />
+                </instance-variables>
+                <behaviors>
+                    <behavior-type name="Bullet" sid="">
+                        <behavior id="Bullet" />
+                    </behavior-type>
+                    <behavior-type name="LineOfSight" sid="">
+                        <behavior id="LOS" />
+                    </behavior-type>
+                    <behavior-type name="Turret" sid="">
+                        <behavior id="Turret" />
+                    </behavior-type>
+                    <behavior-type name="Physics" sid="">
+                        <behavior id="Physics" />
+                    </behavior-type>
+                    <behavior-type name="Fade" sid="">
+                        <behavior id="Fade" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="" speed="5">
+                        <frame duration="1" hotspotX="" hotspotY="" original-source="NIC Hospital Ship I.png">
+                            <image-point name="Imagepoint 1" x="" y="" />
+                            <collision-poly>
+                                <point x="" y="" />
+                               
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
+        <object-folder name="FX">
+            <object-type name="Star" sid="">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Bullet" sid="">
+                        <behavior id="Bullet" />
+                    </behavior-type>
+                    <behavior-type name="Wrap" sid="">
+                        <behavior id="wrap" />
+                    </behavior-type>
+                    <behavior-type name="FadeOut" sid="">
+                        <behavior id="Fade" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="StarRound.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="SmokeTail" sid="">
+                <plugin id="Particles" />
+                <behaviors>
+                    <behavior-type name="Pin" sid="">
+                        <behavior id="Pin" />
+                    </behavior-type>
+                </behaviors>
+                <texture />
+            </object-type>
+            <object-type name="EnemyHit" sid="">
+                <plugin id="Particles" />
+                <texture original-source="fh.png" />
+            </object-type>
+            <object-type name="ParaBulletDestroyer" sid="">
+                <plugin id="Particles" />
+                <texture />
+            </object-type>
+        </object-folder>
+        <object-folder name="Bullet">
+            <object-type name="EnemyBullet" sid="">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Bullet" sid="">
+                        <behavior id="Bullet" />
+                    </behavior-type>
+                    <behavior-type name="DestroyOutsideLayout" sid="">
+                        <behavior id="destroy" />
+                    </behavior-type>
+                    <behavior-type name="Sine" sid="">
+                        <behavior id="Sin" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="" speed="5">
+                        <frame duration="1" hotspotX="" hotspotY="1" original-source="com-flames-png.png">
+                            <collision-poly>
+                                <point x="" y="" /> 
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="PlayerBullet" sid="">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Bullet" sid="">
+                        <behavior id="Bullet" />
+                    </behavior-type>
+                    <behavior-type name="DestroyOutsideLayout" sid="">
+                        <behavior id="destroy" />
+                    </behavior-type>
+                    <behavior-type name="Physics" sid="">
+                        <behavior id="Physics" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="" speed="5">
+                        <frame duration="1" hotspotX="" hotspotY="" original-source="Bullet-Bill-icon.png">
+                            <collision-poly>
+                                <point x="" y="" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
+        
+        <object-folder name="Touch">
+            <object-type name="CP-Fire" sid="">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Sine" sid="">
+                        <behavior id="Sin" />
+                    </behavior-type>
+                    <behavior-type name="Sine2" sid="">
+                        <behavior id="Sin" />
+                    </behavior-type>
+                    <behavior-type name="Flash" sid="">
+                        <behavior id="Flash" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="bomb-pngrepo-com.png">
+                            <collision-poly>
+                                <point x="" y="" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Slow" sid="">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="Slow.png">
+                            <collision-poly>
+                                <point x="" y="" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Steer" sid="">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="" speed="5">
+                        <frame duration="1" hotspotX="" hotspotY="" original-source="Move2.png">
+                            <collision-poly>
+                                <point x="" y="" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="SteerBG" sid="">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Tween" sid="">
+                        <behavior id="Tween" />
+                    </behavior-type>
+                    <behavior-type name="DragDrop" sid="">
+                        <behavior id="DragnDrop" />
+                    </behavior-type>
+                    <behavior-type name="Pin" sid="">
+                        <behavior id="Pin" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="" speed="5">
+                        <frame duration="1" hotspotX="" hotspotY="" original-source="joystick-gamepad-png.png">
+                            <collision-poly>
+                                <point x="" y="" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="TouchL" sid="">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="TouchR" sid="">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
+        <object-type name="flame" sid="">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Pin" sid="">
+                    <behavior id="Pin" />
+                </behavior-type>
+                <behavior-type name="Sine" sid="">
+                    <behavior id="Sin" />
+                </behavior-type>
+                <behavior-type name="Flash" sid="">
+                    <behavior id="Flash" />
+                </behavior-type>
+            </behaviors>
+            <effects>
+                <effect-type name="Lighten">
+                    <effect id="lighten" />
+                </effect-type>
+            </effects>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="flames.png">
+                        <collision-poly>
+                            <point x="" y="" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Explosion" sid="">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Fade" sid="">
+                    <behavior id="Fade" />
+                </behavior-type>
+                <behavior-type name="Pin" sid="">
+                    <behavior id="Pin" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="game_over" sid="">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Sine" sid="">
+                    <behavior id="Sin" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="" speed="5">
+                    <frame duration="1" hotspotX="" hotspotY="" original-source="space-game-prototype.png">
+                        <collision-poly>
+                            <point x="" y="" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="cp" sid="">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="" original-source="control-panel-icon-png-12.png">
+                        <collision-poly>
+                            <point x="" y="" />  
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="leftDrag" sid="">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Pin" sid="">
+                    <behavior id="Pin" />
+                </behavior-type>
+                <behavior-type name="DragDrop" sid="">
+                    <behavior id="DragnDrop" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="rightDrag" sid="">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Pin" sid="">
+                    <behavior id="Pin" />
+                </behavior-type>
+                <behavior-type name="DragDrop" sid="">
+                    <behavior id="DragnDrop" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="speedUP" sid="">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="speedDown" sid="">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+    </object-folder>
+    <families />
+
+    
+    <global-instances>
+        <global-instance type="Audio" uid="0">
+            <properties>
+                <timescale-audio>Off</timescale-audio>
+                <saveload>All</saveload>
+                <play-in-background>No</play-in-background>
+                <positioned-audio></positioned-audio>
+                <panning-model>HRTF</panning-model>
+                <distance-model>Inverse</distance-model>
+                <listener-z-height>600</listener-z-height>
+                <reference-distance>600</reference-distance>
+                <maximum-distance>10000</maximum-distance>
+                <roll-off-factor>1</roll-off-factor>
+            </properties>
+        </global-instance>
+    </global-instances>
+    <sounds-folder>
+        <file name="Shoot.ogg" />
+        <file name="Hit.ogg" />
+    </sounds-folder>
+    <music-folder />
+    <files-folder>
+        <file-folder name="Icons">
+            <file name="icon-16.png" />
+            <file name="icon-32.png" />
+            <file name="icon-114.png" />
+            <file name="icon-128.png" />
+            <file name="icon-256.png" />
+            <file name="loading-logo.png" />
+        </file-folder>
+    </files-folder>
+</c2project>
